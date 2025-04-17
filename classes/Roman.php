@@ -18,5 +18,14 @@ class Roman extends Livre {
     public function tempsLecture() {
         return round($this->nombrePages / 2) . " minutes.";
     }
+
+    public function getGenre() {
+        return $this->genre;
+    }
+    
+    public function getNombrePages() {
+        return $this->nombrePages;
+    }
+    
 }
 ?>

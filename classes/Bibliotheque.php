@@ -30,9 +30,11 @@ class Bibliotheque {
         $extraInfo = '';
         if ($type === 'Roman') {
             $extraInfo = json_encode([
-                'genre' => $livre->genre,
-                'pages' => $livre->nombrePages
+                'genre' => $livre->getGenre(),
+                'pages' => $livre->getNombrePages()
             ]);
+            
+        
         } elseif ($type === 'BandeDessinee') {
             $extraInfo = json_encode([
                 'dessinateur' => $livre->dessinateur,
